@@ -19,7 +19,7 @@ FoodSchema.methods.getName = function() {
 FoodSchema.statics.getAllFoods = function(cb) {
   Food.find({}, (err, food) => {
     if (err) return cb(err);
-    cb();
+    cb(food);
   });
 };
 
